@@ -7,38 +7,98 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Bandeau vertical à droite pour les images -->
+  <div id="right-banner">
+    <div class="image-container">
+      <!-- Les images seront insérées ici par main.js -->
+    </div>
+  </div>
+  
   <header>
     <nav>
       <ul>
         <li><a href="#accueil">Accueil</a></li>
         <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#enseignements">Enseignements</a></li>
         <li><a href="#contributions">Contributions</a></li>
-        <li><a href="https://github.com/CBarrelet" target="_blank">Github</a></li>
+        <li class="github-button">
+          <a href="https://github.com/CBarrelet" target="_blank">
+            <img src="./images/github_logo.png" alt="GitHub Logo" width="50" height="50">
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
-
+  
   <main>
     <section id="accueil">
       <h1>Bienvenue sur mon site</h1>
       <p>Présentation, objectif, etc.</p>
     </section>
-
+  
     <section id="parcours">
       <h2>Parcours</h2>
-      <p>Votre parcours académique et professionnel.</p>
+      
+      <article class="parcours-item">
+        <h3>Doctorat en Robotique</h3>
+        <p><strong>2021-2025 :</strong> Doctorat spécialité SyAM (Système Automatique et Microélectronique) à l’Université de Montpellier, financé par le projet Européen MAELSTROM.</p>
+        <p><strong>Encadrement :</strong> Dirigé par Marc CHAUMONT (MCF HDR) et Marc Gouttefarde (DR CNRS), co-encadré par Gérard SUBSOL (CR CNRS) et Vincent CREUZE (PR).</p>
+        <p><strong>Titre de thèse :</strong> “Approches d’apprentissage automatique pour la détection et la classification des déchets dans les vidéos sous-marines en vue du nettoyage robotisé des fonds marins”.</p>
+      </article>
+      
+      <article class="parcours-item">
+        <h3>Master EEA spécialité Robotique</h3>
+        <p><strong>2018-2020 :</strong> Master EEA (Électronique, Électrotechnique et Automatique) spécialité Robotique à l'Université de Montpellier.</p>
+      </article>
+      
+      <article class="parcours-item">
+        <h3>ERASMUS</h3>
+        <p><strong>2019 :</strong> Étudiant en échange pendant un semestre lors de la première année de Master à l'Université des Sciences et de l'Ingénierie de Linköping, en Suède.</p>
+        <p>Domaines étudiés : Génie informatique et Génie électronique.</p>
+      </article>
+      
+      <article class="parcours-item">
+        <h3>Licence EEA</h3>
+        <p><strong>2015-2018 :</strong> Licence EEA à l'Université de Montpellier.</p>
+      </article>
     </section>
-
+  
+    <section id="enseignements">
+      <h2>Enseignements</h2>
+      
+      <div class="enseignement-section">
+        <h3>Section 27</h3>
+        <ul>
+          <li>Architecture et Système d'exploitation</li>
+          <li>Introduction à l'Assembleur</li>
+          <li>Image and Interaction (Python)</li>
+        </ul>
+      </div>
+      
+      <div class="enseignement-section">
+        <h3>Section 61</h3>
+        <ul>
+          <li>Algèbre Linéaire</li>
+          <li>Algorithmique numérique (Scilab)</li>
+          <li>Introduction au C</li>
+          <li>Génie informatique (C++ / Python)</li>
+          <li>Traitement du signal (MATLAB)</li>
+          <li>Traitement d'image (MATLAB / Python)</li>
+          <li>Vision robotique (C++ / Python)</li>
+        </ul>
+      </div>
+    </section>
+  
     <section id="contributions">
       <h2>Contributions</h2>
       <p>Projets, publications, contributions open source, etc.</p>
     </section>
   </main>
-
+  
   <footer>
-    <p>&copy; 2025 Mon Site Perso</p>
+    <p>&copy; 2025 Cyril Barrelet</p>
   </footer>
-
+  
   <script src="main.js"></script>
 </body>
 </html>

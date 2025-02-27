@@ -1,36 +1,125 @@
-body {
+/* Bandeau vertical à droite */
+#right-banner {
+    position: fixed;
+    top: 60px; /* Commence juste après le header */
+    right: 0;
+    width: 20%; /* 20% de la largeur de l'écran */
+    height: calc(100% - 60px); /* Reste de l'écran après le header */
+    overflow-y: hidden; /* On masque le débordement vertical pour l'effet */
+    overflow-x: hidden;
+    background-color: #222;
+    z-index: 999;
+    padding: 10px 0;
+    box-sizing: border-box;
+  }
+  
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    /* Animation de défilement vertical en continu */
+    animation: scroll 60s linear infinite;
+  }
+  
+  /* Définition de l'animation de défilement */
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    background: transparent;
+  }
+  
+  /* Reste du CSS inchangé */
+  
+  body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    box-sizing: border-box;
   }
   
   header {
-    background: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
     color: #fff;
-    padding: 1em 0;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    box-sizing: border-box;
+    margin-right: 20%;
   }
   
   nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 0;
+    align-items: center;
+    gap: 1em;
     padding: 0;
-  }
-  
-  nav ul li {
-    margin: 0 1em;
+    margin: 0;
+    margin-left: 10px;
   }
   
   nav ul li a {
-    color: #fff;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 2px solid transparent;
+    border-radius: 5px;
     text-decoration: none;
+    color: #fff;
+    background-color: #444;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: #666;
+    border-color: #fff;
+  }
+  
+  nav ul li a img {
+    background: transparent;
+  }
+  
+  .github-button a {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    border-radius: 0px;
+    margin-top: 5px;
+  }
+  
+  .github-button a:hover {
+    background: transparent !important;
+    border: none !important;
+  }
+  
+  main {
+    margin-right: 20%;
+    margin-top: 60px;
+    box-sizing: border-box;
+    padding: 1em;
   }
   
   section {
     padding: 2em;
-    margin: 1em;
+    margin: 1em 0;
   }
   
   footer {
@@ -38,5 +127,38 @@ body {
     padding: 1em;
     background: #333;
     color: #fff;
+  }
+  
+  .enseignement-section {
+    margin-bottom: 0.5em;
+  }
+  
+  .enseignement-section h3 {
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5em;
+  }
+  
+  .enseignement-section ul {
+    list-style-type: disc;
+    margin-left: 2em;
+  }
+  
+  .enseignement-section li {
+    margin-bottom: 0.5em;
+  }
+  
+  .parcours-item {
+    padding: 0.5em;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .parcours-item h3 {
+    color: #333;
+    margin-bottom: 0.5em;
+  }
+  
+  .parcours-item p {
+    margin: 0.5em 0;
   }
   
