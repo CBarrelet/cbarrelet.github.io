@@ -9,7 +9,6 @@ title: "Site en Construction"
 </div>
 
 <script>
-  // Exemple : change la couleur du contenu après 2 secondes
   setTimeout(function() {
     document.getElementById("content").style.color = "#ff0000";
   }, 2000);
