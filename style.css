@@ -13,14 +13,14 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
+    /* Ne pas fixer une hauteur ; utiliser auto pour s'ajuster */
+    height: auto;
     background-color: #333;
     color: #fff;
-    display: flex;
-    align-items: center;
+    padding: 0.5em 0; /* Ajustez le padding si besoin */
     z-index: 1000;
     box-sizing: border-box;
-    margin-right: 20%; /* Espace pour le bandeau droit */
+    margin-right: 20%; /* Pour laisser de la place au bandeau droit */
   }
   
   /* Navigation - Centrage des boutons */
@@ -177,9 +177,15 @@ body {
     }
     
     nav ul {
-      flex-direction: column;
-      gap: 0.5em;
-    }
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;   /* Permet aux boutons de passer à la ligne */
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        padding: 0;
+        margin: 0;
+      }
     
     nav ul li a {
       padding: 0.5em; /* Réduisez les paddings si nécessaire */
