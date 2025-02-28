@@ -192,3 +192,30 @@ body {
     }
   }
   
+  /* Assurez-vous que le conteneur des présentations occupe toute la largeur du main */
+#presentations {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+  }
+  
+  /* Chaque présentation occupe 100% de la largeur de son conteneur */
+  .presentation {
+    width: 100%;
+    margin-bottom: 2em;
+    box-sizing: border-box;
+  }
+  
+  /* Optionnel : pour s'assurer que les PDF s'adaptent bien */
+  .presentation embed {
+    width: 100%;
+    height: 600px; /* ou une autre valeur selon vos besoins */
+    border: none;
+  }
+
+  .highlight {
+    border: 2px solid red;
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 0.5em;
+    transition: all 0.3s ease;
+  }
