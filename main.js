@@ -30,11 +30,9 @@ document.addEventListener("DOMContentLoaded", function() {
       const img = document.createElement("img");
       img.src = src;
       img.style.cursor = "pointer";
-      console.log("Création de l'image: " + src);
   
       if (src.endsWith("uno.png") || src.endsWith("detection.gif") || src.endsWith("tracking.gif")) {
         img.addEventListener("click", function() {
-          console.log("Image UNO cliquée");
           window.location.href = "presentations.html#uno_presentation";
         });
       }
@@ -45,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       if (src.endsWith("fish_trajectories.gif") || src.endsWith("fishes.gif")) {
         img.addEventListener("click", function() {
-          window.location.href = "presentations.html#fish_presentation";
+          window.location.href = "contributions.html#fish";
         });
       }
       if (src.endsWith("blocs_venise.png") ||
@@ -55,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
         src.endsWith("robot3.png")
         ) {
         img.addEventListener("click", function() {
-          console.log("Image blocs_venise cliquée");
           window.location.href = "contributions.html#maelstrom";
         });
       }
@@ -70,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
         src.endsWith("multiway_4-1.png")
       ) {
         img.addEventListener("click", function() {
-          window.location.href = "presentations.html#ckcv_presentation";
+          window.location.href = "contributions.html#ckcv";
         });
       }
       return img;
@@ -81,45 +78,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const imageElements = shuffled.map(src => createImageElement(src));
     imageElements.forEach(img => container.appendChild(img));
   
-    // Duplication des images en clonant pour la boucle continue
-    // imageElements.forEach(img => {
-    //   const clone = img.cloneNode(true);
-    //   // Ré-attacher les écouteurs pour le clone (vérification par includes)
-    //   if (clone.src.includes("uno.png") || clone.src.includes("detection.gif") || clone.src.includes("tracking.gif")) {
-    //     clone.addEventListener("click", function() {
-    //       window.location.href = "presentations.html#uno_presentation";
-    //     });
-    //   }
-    //   if (clone.src.includes("site_dog.png") || clone.src.includes("site_dog2.png")) {
-    //     clone.addEventListener("click", function() {
-    //       window.location.href = "presentations.html#dog_presentation";
-    //     });
-    //   }
-    //   if (clone.src.includes("fish_trajectories.gif") || clone.src.includes("fishes.gif")) {
-    //     clone.addEventListener("click", function() {
-    //       window.location.href = "presentations.html#fish_presentation";
-    //     });
-    //   }
-    //   if (clone.src.includes("blocs_venise.png")) {
-    //     clone.addEventListener("click", function() {
-    //       window.location.href = "contributions.html#maelstrom";
-    //     });
-    //   }
-    //   if (
-    //     clone.src.includes("general_method_2.png") || 
-    //     clone.src.includes("h2_aeroplane.png") ||
-    //     clone.src.includes("h2_dog.png") ||
-    //     clone.src.includes("H2_pvoc10.png") ||
-    //     clone.src.includes("H0.png") ||
-    //     clone.src.includes("H1.png") ||
-    //     clone.src.includes("H2.png") ||
-    //     clone.src.includes("multiway_4-1.png")
-    //   ) {
-    //     clone.addEventListener("click", function() {
-    //       window.location.href = "presentations.html#ckcv_presentation";
-    //     });
-    //   }
-    //   container.appendChild(clone);
-    // });
+
   });
   
